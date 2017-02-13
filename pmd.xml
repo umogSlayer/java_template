@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="FF_1234_Pupkin_Init_1-pmd" default="default" basedir=".">
+    <path id="pmd.classpath">
+        <fileset dir="pmd">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    <taskdef
+        name="pmd"
+        classname="net.sourceforge.pmd.ant.PMDTask"
+        classpathref="pmd.classpath" />
+
+    <target name="pmd">
+        <pmd shortFilenames="true">
+            <sourceLanguage name="java" version="1.8" />
+            <ruleset>java-basic</ruleset>
+            <ruleset>java-unnecessary</ruleset>
+            <formatter type="html" toFile="pmd_report.html" />
+            <fileset dir="src">
+                <include name="**/*.java" />
+            </fileset>
+        </pmd>
+    </target>
+</project>
