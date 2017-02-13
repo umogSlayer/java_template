@@ -15,7 +15,7 @@
             <sourceLanguage name="java" version="1.8" />
             <ruleset>java-basic</ruleset>
             <ruleset>java-unnecessary</ruleset>
-            <formatter type="html" toFile="pmd_report.html" />
+            <formatter type="html" toFile="build/pmd_report.html" />
             <fileset dir="src">
                 <include name="**/*.java" />
             </fileset>
